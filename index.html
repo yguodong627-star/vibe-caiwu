@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071a22">
+<title>细水账 · 本地个人财务与订阅管理器</title>
+<meta name="description" content="导入支付宝/微信/银行账单，自动识别周期扣费，月度预算与订阅提醒。纯前端，数据只存本机，完全免费。">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <aside class="side" id="side">
+    <div class="brand"><span class="logo-dot"></span><span class="brand-name">细水账</span><span class="brand-en">Xishui</span></div>
+    <nav class="nav" id="nav" aria-label="主导航"></nav>
+    <div class="side-foot">
+      <p class="privacy">数据只保存在这台设备的浏览器里，<b>不上传</b>。清除浏览器数据会丢失，请定期导出备份。</p>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="hero" id="hero"></header>
+    <div class="banner" id="banner" hidden></div>
+    <main class="content" id="content" tabindex="-1"></main>
+    <footer class="foot">细水账 · 免费、无账号、无广告 · 关闭浏览器时<b>不会</b>推送提醒（提醒只在打开页面时显示）· 不支持多设备同步，请用“导出备份”迁移</footer>
+  </div>
+</div>
+<input type="file" id="fileIn" accept=".csv,.txt,.tsv,text/csv" multiple hidden>
+<input type="file" id="restoreIn" accept=".json,application/json" hidden>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="core.js"></script>
+<script src="sample.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
